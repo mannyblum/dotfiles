@@ -1,0 +1,15 @@
+[submodule ".vim/bundle/command-t"]
+	path = .vim/bundle/command-t
+	url = https://github.com/wincent/Command-T.git
+[submodule ".vim/bundle/TaskList"]
+	path = .vim/bundle/TaskList
+	url = https://github.com/vim-scripts/TaskList.vim.git
+[submodule ".vim/bundle/thermometer"]
+	path = .vim/bundle/thermometer
+	url = https://github.com/dgsuarez/thermometer.git
+[submodule ".vim/bundle/colors/solarized"]
+	path = .vim/bundle/colors/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/colors/colors/solarized"]
+	path = .vim/bundle/colors/colors/solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
