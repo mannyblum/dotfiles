@@ -1,0 +1,16 @@
+/env
+
+# VIM Ignores
+*.swp
+*.swo
+.NERDTreeBookmarks
+
+# OS X
+.DS_Store
+Thumbs.db
+
+# Source Ignores
+.hg
+.hgignore
+.svn
+CVS
