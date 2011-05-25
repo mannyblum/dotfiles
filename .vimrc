@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype on
 filetype off
 call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
@@ -35,6 +36,7 @@ set columns=90
 set wrapmargin=10
 set numberwidth=5
 "set relativenumber
+set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOR
@@ -120,7 +122,11 @@ set showtabline=1
 syntax on
 colorscheme wombat256
 set background=dark
-set colorcolumn=80
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
 hi NonText ctermfg=7 guifg=gray
 hi SpecialKey ctermfg=8
 
