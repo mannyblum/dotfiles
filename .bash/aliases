@@ -9,7 +9,7 @@ alias sites="cd ~/Sites"
 alias medley="cd ~/devel/cms_dev/src/medley-templates"
 alias storyville="cd ~/devel/cms_dev/src/storyville"
 alias top='top -ocpu'
-alias t='todo.sh -d ~/.todo.cfg'
+alias tmux='tmux -2'
 
 # t Aliases
 alias t='python /usr/bin/t/t.py --task-dir ~/Dropbox/tasks --list tasks'
