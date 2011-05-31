@@ -29,8 +29,8 @@ normal_colours=$'\e[m'
 export PS1="\[$green\]\u@\h:\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
 
 source ~/.bash/aliases
-#source ~/.bash/completions
 source ~/.bash/paths
 source ~/.bash/config
+source ~/.personal
 
 export PATH=$HOME/local/bin:$PATH
