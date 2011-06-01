@@ -36,7 +36,7 @@ set columns=90
 set wrapmargin=10
 set numberwidth=5
 "set relativenumber
-set t_Co=256
+"set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOR
@@ -120,9 +120,9 @@ set showtabline=1
 " COLORS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-let g:solarized_termcolors=256
-colorscheme solarized
+set gfn=Droid\ Sans\ Mono:h15
 set background=dark
+colorscheme solarized
 if exists('+colorcolumn')
     set colorcolumn=80
 else

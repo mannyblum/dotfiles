@@ -31,6 +31,6 @@ export PS1="\[$green\]\u@\h:\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_col
 source ~/.bash/aliases
 source ~/.bash/paths
 source ~/.bash/config
-source ~/.personal
+source ~/.localrc
 
 export PATH=$HOME/local/bin:$PATH

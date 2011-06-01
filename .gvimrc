@@ -11,9 +11,10 @@ set columns=160
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set gfn=Droid\ Sans\ Mono:h15
 
-syntax enable
+syntax on
 set background=dark
-colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme solarized 
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
