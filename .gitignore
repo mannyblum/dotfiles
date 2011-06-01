@@ -4,6 +4,7 @@
 *.swp
 *.swo
 .NERDTreeBookmarks
+.vim/.netrwhist
 
 # OS X
 .DS_Store

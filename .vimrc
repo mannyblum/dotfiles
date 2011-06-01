@@ -1,7 +1,6 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-filetype on
 filetype off
 call pathogen#runtime_append_all_bundles()
 "call pathogen#helptags()
@@ -164,7 +163,7 @@ set statusline+=\ %#warningmsg# " switch to warningmsg color
 set statusline+=%{SyntasticStatuslineFlag()} " show Syntastic flag
 set statusline+=%* " back to normal color
 set statusline+=\ %=%< " Right-align and start truncation
-set statusline+=%{TagInStatusLine()} " Show current class/function in Python
+"set statusline+=%{TagInStatusLine()} " Show current class/function in Python
 set statusline+=\ [%04l/%04L\ %03c] " Show current line number, total lines, current column
 set statusline+=\ %p%% " Percentage through file in lines
 
