@@ -13,7 +13,7 @@ set gfn=Droid\ Sans\ Mono:h15
 
 syntax enable
 set background=dark
-colorscheme molokai
+colorscheme solarized
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59

@@ -120,7 +120,8 @@ set showtabline=1
 " COLORS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
-colorscheme wombat256
+let g:solarized_termcolors=256
+colorscheme solarized
 set background=dark
 if exists('+colorcolumn')
     set colorcolumn=80
