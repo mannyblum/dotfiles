@@ -19,31 +19,31 @@ export LANG="en_US.UTF-8"
 
 # Use MacVim's VIM instead of system VIM.
 # Start gVIM
-v() {
-if [ $# == 0 ]
-then
-    /Applications/MacVim.app/Contents/MacOS/Vim -g &
-else
-    if [ "$1" == "-" ]
-    then
-    /Applications/MacVim.app/Contents/MacOS/Vim -g -
-    else
-    /Applications/MacVim.app/Contents/MacOS/Vim -g "$@" &
-    fi
-fi
-}
+#v() {
+#if [ $# == 0 ]
+#then
+#    /Applications/MacVim.app/Contents/MacOS/Vim -g &
+#else
+#    if [ "$1" == "-" ]
+#    then
+#    /Applications/MacVim.app/Contents/MacOS/Vim -g -
+#    else
+#    /Applications/MacVim.app/Contents/MacOS/Vim -g "$@" &
+#    fi
+#fi
+#}
 
 # Start terminal version of VIM with clipboard support
 vi() {
 if [ $# == 0 ]
 then
-    /Applications/MacVim.app/Contents/MacOS/Vim
+    /Applications/MacVim.app/Contents/MacOS/Vim -f
 else
     if [ "$1" == "-" ]
     then
-    /Applications/MacVim.app/Contents/MacOS/Vim -
+    /Applications/MacVim.app/Contents/MacOS/Vim -f -
     else
-    /Applications/MacVim.app/Contents/MacOS/Vim "$@"
+    /Applications/MacVim.app/Contents/MacOS/Vim -f "$@"
     fi
 fi
 }
@@ -52,13 +52,13 @@ fi
 vim() {
 if [ $# == 0 ]
 then
-    /Applications/MacVim.app/Contents/MacOS/Vim
+    /Applications/MacVim.app/Contents/MacOS/Vim -f
 else
     if [ "$1" == "-" ]
     then
-    /Applications/MacVim.app/Contents/MacOS/Vim -
+    /Applications/MacVim.app/Contents/MacOS/Vim -f -
     else
-    /Applications/MacVim.app/Contents/MacOS/Vim "$@"
+    /Applications/MacVim.app/Contents/MacOS/Vim -f "$@"
     fi
 fi
 }
