@@ -340,54 +340,6 @@ endif
 onoremap id i[
 onoremap ad a[
 
-" Next ()
-vnoremap <silent> inb :<C-U>normal! f(vib<cr>
-onoremap <silent> inb :<C-U>normal! f(vib<cr>
-vnoremap <silent> anb :<C-U>normal! f(vab<cr>
-onoremap <silent> anb :<C-U>normal! f(vab<cr>
-vnoremap <silent> in( :<C-U>normal! f(vi(<cr>
-onoremap <silent> in( :<C-U>normal! f(vi(<cr>
-vnoremap <silent> an( :<C-U>normal! f(va(<cr>
-onoremap <silent> an( :<C-U>normal! f(va(<cr>
-
-" Next {}
-vnoremap <silent> inB :<C-U>normal! f{viB<cr>
-onoremap <silent> inB :<C-U>normal! f{viB<cr>
-vnoremap <silent> anB :<C-U>normal! f{vaB<cr>
-onoremap <silent> anB :<C-U>normal! f{vaB<cr>
-vnoremap <silent> in{ :<C-U>normal! f{vi{<cr>
-onoremap <silent> in{ :<C-U>normal! f{vi{<cr>
-vnoremap <silent> an{ :<C-U>normal! f{va{<cr>
-onoremap <silent> an{ :<C-U>normal! f{va{<cr>
-
-" Next []
-vnoremap <silent> ind :<C-U>normal! f[vi[<cr>
-onoremap <silent> ind :<C-U>normal! f[vi[<cr>
-vnoremap <silent> and :<C-U>normal! f[va[<cr>
-onoremap <silent> and :<C-U>normal! f[va[<cr>
-vnoremap <silent> in[ :<C-U>normal! f[vi[<cr>
-onoremap <silent> in[ :<C-U>normal! f[vi[<cr>
-vnoremap <silent> an[ :<C-U>normal! f[va[<cr>
-onoremap <silent> an[ :<C-U>normal! f[va[<cr>
-
-" Next <>
-vnoremap <silent> in< :<C-U>normal! f<vi<<cr>
-onoremap <silent> in< :<C-U>normal! f<vi<<cr>
-vnoremap <silent> an< :<C-U>normal! f<va<<cr>
-onoremap <silent> an< :<C-U>normal! f<va<<cr>
-
-" Next ''
-vnoremap <silent> in' :<C-U>normal! f'vi'<cr>
-onoremap <silent> in' :<C-U>normal! f'vi'<cr>
-vnoremap <silent> an' :<C-U>normal! f'va'<cr>
-onoremap <silent> an' :<C-U>normal! f'va'<cr>
-
-" Next ""
-vnoremap <silent> in" :<C-U>normal! f"vi"<cr>
-onoremap <silent> in" :<C-U>normal! f"vi"<cr>
-vnoremap <silent> an" :<C-U>normal! f"va"<cr>
-onoremap <silent> an" :<C-U>normal! f"va"<cr>
-
 " CD to directory of current file
 map <Leader>cd :cd %:p:h<CR>
 
