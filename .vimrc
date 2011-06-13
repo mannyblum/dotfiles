@@ -362,7 +362,6 @@ nmap <D-t> :tabnew<CR>
 imap <D-t> <Esc>:tabnew<CR>
 
 " Command-T Bindings
-
 nmap <silent> <Leader>t :CommandT<CR>
 nmap <silent> <Leader>b :CommandTBuffer<CR>
 
