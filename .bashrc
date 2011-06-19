@@ -34,3 +34,5 @@ source ~/.bash/config
 source ~/.localrc
 
 export PATH=$HOME/local/bin:$PATH
+
+export ARCHFLAGS='-arch i386 -arch x86_64'
