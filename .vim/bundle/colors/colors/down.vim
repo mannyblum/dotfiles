@@ -1,1 +1,0 @@
-/Users/kennethlove/Code/up.vim/colors/up.vim
