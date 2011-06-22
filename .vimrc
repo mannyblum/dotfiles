@@ -35,6 +35,7 @@ set columns=90
 set wrapmargin=10
 set numberwidth=5
 "set t_Co=256
+set t_Co=16
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOR
@@ -120,6 +121,7 @@ set showtabline=1
 syntax on
 set gfn=Droid\ Sans\ Mono:h15
 set background=dark
+let g:solarized_termcolors=256
 colorscheme solarized
 if exists('+colorcolumn')
     set colorcolumn=80
