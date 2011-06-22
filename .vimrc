@@ -3,7 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
 call pathogen#runtime_append_all_bundles()
-"call pathogen#helptags()
+call pathogen#helptags()
 
 set nocompatible
 set cpoptions=aABceFsmq
@@ -34,7 +34,6 @@ set textwidth=0
 set columns=90
 set wrapmargin=10
 set numberwidth=5
-"set relativenumber
 "set t_Co=256
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -224,8 +223,6 @@ set infercase
 set hlsearch
 set showmatch
 set diffopt=filler,iwhite
-nnoremap / /\v
-vnoremap / /\v
 set gdefault
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -366,14 +363,10 @@ nmap <silent> <Leader>t :CommandT<CR>
 nmap <silent> <Leader>b :CommandTBuffer<CR>
 
 " Bind Command-arrow/movement to move between windows
-map <D-J> <C-W>j
-map <D-S-Down> <C-W>j
-map <D-K> <C-W>k
-map <D-S-Up> <C-W>k
-map <D-H> <C-W>h
-map <D-S-Left> <C-W>h
-map <D-L> <C-W>l
-map <D-S-Right> <C-W>l
+map <C-J> <C-W>j
+map <C-K> <C-W>k
+map <C-H> <C-W>h
+map <C-L> <C-W>l
 
 map <D-0> <C-W>= " make Command-0 equal windows
 
@@ -483,20 +476,9 @@ vnoremap <D-/> :TComment<CR>
 " PLUGIN SETTINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" RAGTAG
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap <M-o>       <Esc>o
-inoremap <C-j>       <Down>
-let g:ragtag_global_maps = 1
-
 " TASKLIST
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>td <Plug>TaskList
-
-" VIMWIKI
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>tt <Plug>VimwikiToggleListItem
-let g:vimwiki_list= [{'path': '~/Dropbox/App\ Data/vimwiki/', 'path_html': '~/Dropbox/Public/vimwiki/', 'ext': '.txt'}]
 
 " ZENCODING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -506,18 +488,16 @@ let g:user_zen_expandabbr_key = '<c-e>'
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <F4> :GundoToggle<CR>
 
-" NERD_COMMENTER
+" PEP8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <D-/> ,c<space>
-vmap <D-/> ,c<space>
-imap <D-/> <C-O>,c<space>
+let g:pep8_map = '<leader>8'
 
 " NERD_TREE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <Leader>d :NERDTreeFind<CR>
 let g:NERDChristmasTree = 1
 let g:NERDTreeQuitOnOpen = 1
-let g:NERDTreeWinPos = 'right'
+let g:NERDTreeWinPos = 'left'
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoCenter = 1
@@ -526,10 +506,6 @@ let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeSortOrder = ['\/$', '*']
 let g:NERDTreeShowLineNumbers = 1
 map <F2> :NERDTreeToggle<CR>
-
-" VIMTODO
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:todo_done_file = 'done.txt'
 
 " SYNTASTIC
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -549,11 +525,6 @@ let g:syntastic_quiet_warnings = 0
 " ignore djangohtml
 let g:syntastic_disabled_filetypes = ['htmldjango', 'txt', 'text', 'tumblr', 'css']
 
-" FUGITIVE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gc :Gcommit<CR>
-
 " BUFEXPLORER
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:bufExplorerSortBy = 'mru'
@@ -572,19 +543,6 @@ let g:miniBufExplModSelTarget = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNCTIONS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" HIGHLIGHT LONG LINES
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-command! -nargs=? HighlightLongLines call s:HighlightLongLines('<args>')
-function! s:HighlightLongLines(width)
-    let targetWidth = a:width != '' ? a:width : 79
-    if targetWidth > 0
-        exec 'match Error /\%>' . (targetWidth) . 'v/'
-    else
-        echomsg "Usage: HighlightLongLines [natural number]"
-    endif
-endfunction
-nmap <leader>h :HighlightLongLines<CR>
 
 " SEARCH FOR VISUAL SELECTION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
