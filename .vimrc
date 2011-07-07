@@ -120,14 +120,14 @@ set showtabline=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set gfn=Droid\ Sans\ Mono:h15
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
-if exists('+colorcolumn')
-    set colorcolumn=80
-else
-    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-endif
+" IMPORTANT: Uncomment one of the following lines to force
+" " using 256 colors (or 88 colors) if your terminal supports it,
+" " but does not automatically use 256 colors by default.
+set t_Co=256
+"set t_Co=88
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+"colorscheme baycomb
+colorscheme fnaqevan
 hi NonText ctermfg=7 guifg=gray
 hi SpecialKey ctermfg=8
 

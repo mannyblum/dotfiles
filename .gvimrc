@@ -14,7 +14,7 @@ set gfn=Droid\ Sans\ Mono:h15
 syntax on
 set background=dark
 "let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
