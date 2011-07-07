@@ -9,12 +9,15 @@ set columns=160
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI COLORING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set gfn=Droid\ Sans\ Mono:h15
-
 syntax on
-set background=dark
-"let g:solarized_termcolors=256
-"colorscheme solarized
+set gfn=Droid\ Sans\ Mono:h15
+" IMPORTANT: Uncomment one of the following lines to force
+" " using 256 colors (or 88 colors) if your terminal supports it,
+" " but does not automatically use 256 colors by default.
+set t_Co=256
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+"colorscheme baycomb
+colorscheme fnaqevan
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
