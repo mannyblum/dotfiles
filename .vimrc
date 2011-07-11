@@ -34,8 +34,6 @@ set textwidth=0
 set columns=90
 set wrapmargin=10
 set numberwidth=5
-"set t_Co=256
-set t_Co=16
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BEHAVIOR
@@ -156,8 +154,6 @@ set statusline+=\ %y " Filetype
 set statusline+=\ %#error# " switch to error color
 set statusline+=%{StatuslineTabWarning()} " show warning about mixed tabs or bad &et
 set statusline+=%{StatuslineTrailingSpaceWarning()} " show warning about trailing whitespace
-"set statusline+=%{StatuslineLongLineWarning()} " show warning about long 
-"lines
 set statusline+=%* " back to normal color
 set statusline+=\ %#warningmsg# " switch to warningmsg color
 set statusline+=%{SyntasticStatuslineFlag()} " show Syntastic flag
@@ -257,9 +253,6 @@ if has("autocmd")
     " Autodetect todo files
     autocmd BufNewFile,BufRead *.todo setfiletype todo
 
-    " Autodetect Actionscript files
-    au BufNewFile,BufRead *.as set filetype=actionscript
-
     " Automatically strip extraneous whitespace when saving Python or
     " Javascript files.
     " autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
@@ -319,10 +312,12 @@ if has("autocmd")
         autocmd FileType php set omnifunc=phpcomplete#CompletePHP
     augroup END
 
-    " USE GOOGLE'S JAVASCRIPT LINTER
-    """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-    au BufNewFile,BufRead *.js set makeprg=gjslint\ %
-    au BufNewFile,BufRead *.js set errorformat=%-P-----\ FILE\ \ :\ \ %f\ -----,Line\ %l\\,\ E:%n:\ %m,%-Q,%-GFound\ %s,%-GSome\ %s,%-Gfixjsstyles%s,%-Gscript\ can\ %s,%-G
+"    USE GOOGLE'S JAVASCRIPT LINTER
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"    au BufNewFile,BufRead *.js set makeprg=gjslint\ %
+"    au BufNewFile,BufRead *.js set errorformat=%-P-----\ FILE\ \ :\ \ %f\ 
+"    -----,Line\ %l\\,\ E:%n:\ %m,%-Q,%-GFound\ %s,%-GSome\ 
+"    %s,%-Gfixjsstyles%s,%-Gscript\ can\ %s,%-G
 
     " SAVE FILES WHEN VIM LOSES FOCUS
     """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -333,10 +328,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Shortcut for square brackets "
-onoremap id i[
-onoremap ad a[
 
 " CD to directory of current file
 map <Leader>cd :cd %:p:h<CR>
@@ -382,13 +373,6 @@ nmap Q gq
 " Turn hidden characters on/off
 nmap <silent> <LocalLeader>s :set nolist!<CR>
 
-" Up/down go visually instead of by physical lines
-" Interactive ones need to check whether we're in the autocomplete popup
-map <up> gk
-"inoremap <up> <C-R>=pumvisible() ? "\<lt>up>" : "\<lt>C-o>gk"<Enter>
-map <down> gj
-"inoremap <down> <C-R>=pumvisible() ? "\<lt>down>" : "\<lt>C-o>gj"<Enter>
-
 " Map normal mode Enter to add a new line before the current one
 nmap <Enter> O<Esc>
 
@@ -426,22 +410,6 @@ nmap # #zzzv
 nmap g* g*zzzv
 nmap g# g#zzzv
 
-" Parenthesis/bracket expanding
-vnoremap $1 <esc>`>a)<esc>`<i(<esc>
-vnoremap $2 <esc>`>a]<esc>`<i[<esc>
-vnoremap $3 <esc>`>a}<esc>`<i{<esc>
-vnoremap $$ <esc>`>a"<esc>`<i"<esc>
-vnoremap $q <esc>`>a'<esc>`<i'<esc>
-vnoremap $e <esc>`>a"<esc>`<i"<esc>
-
-" Map auto complete of (, ", ', [
-inoremap $1 ()<esc>i
-inoremap $2 []<esc>i
-inoremap $3 {}<esc>i
-inoremap $4 {<esc>o}<esc>O
-inoremap $q ''<esc>i
-inoremap $e ""<esc>i
-
 " Mappings for cope
 nmap <leader>cc :botright cope<CR>
 nmap <leader>n :cn<CR>
@@ -454,14 +422,8 @@ nmap gb :bnext<CR>
 nmap gB :bprev<CR>
 nmap <leader>reset :0,3000bd<CR>
 
-" Sort CSS files alphabetically
-nmap sort :g#\({\n\)\@<=#.,/}/sort<CR>
-
 " Make <leader>ft fold an HTML tag
 nnoremap <leader>ft Vatzf
-
-" Sort CSS properties
-nnoremap <leader>S ?{<CR>jV/^\s*\}?$<CR>k:sort<CR>:noh<CR>
 
 " Reselect just-pasted text
 nnoremap <leader>v V`]
@@ -533,13 +495,6 @@ let g:bufExplorerSplitBelow = 1
 let g:bufExplorerSplitRight = 1
 let g:bufExplorerDefaultHelp = 0
 let g:bufExplorerShowRelativePath = 1
-
-" MINIBUFEXPL
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplModSelTarget = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNCTIONS

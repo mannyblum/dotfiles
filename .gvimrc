@@ -16,17 +16,12 @@ set gfn=Droid\ Sans\ Mono:h15
 " " but does not automatically use 256 colors by default.
 set t_Co=256
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-"colorscheme baycomb
 colorscheme fnaqevan
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 "set transparency=10
-
-"hi CursorLine gui=underline
-"set cursorline
-"set cursorcolumn
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI SETTINGS
