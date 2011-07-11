@@ -2,8 +2,6 @@
 
 # Aliases
 # alias ls="ls -lhFG"
-alias ls="ls -aFGhkLlpsTP"
-alias l="ls"
 alias lg="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//-/g' -e 's/^/ /' -e 's/-/|/'"
 alias sites="cd ~/Sites"
 alias medley="cd ~/devel/cms_dev/src/medley-templates"
