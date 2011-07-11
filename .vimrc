@@ -118,11 +118,7 @@ set showtabline=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set gfn=Droid\ Sans\ Mono:h15
-" IMPORTANT: Uncomment one of the following lines to force
-" " using 256 colors (or 88 colors) if your terminal supports it,
-" " but does not automatically use 256 colors by default.
 set t_Co=256
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 "colorscheme baycomb
 colorscheme fnaqevan
 hi NonText ctermfg=7 guifg=gray
