@@ -7,7 +7,11 @@ export LSCOLORS;
 #export VISUAL="vim -f"
 export EDITOR="vi -f"
 
-export TERM=xterm-256color
+if [[ "${COLORTERM}" == "gnome-terminal" && "${TERM}" != "xterm"  ]]; then
+    export TERM="gnome-256color"
+else
+    export TERM="xterm-256color"
+fi
 
 export HISTIGNORE=""
 export HISTSIZE=1048576
