@@ -1,1 +1,0 @@
-/Users/kennethlove/Code/simple-javascript-indenter/indent/javascript.vim
