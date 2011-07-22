@@ -5,6 +5,20 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+set nocompatible
+set cpoptions=aABceFsmq
+"set autochdir
+set nostartofline " don't jump to the first character when paging
+set title
+set backspace=indent,eol,start " allow backspacing over everything in insert mode
+set ttyfast
+let mapleader = ','
+let g:mapleader = ','
+let localleader = '\'
+let g:localleader = '\'
+let leader = ','
+let g:leader = ','
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DISPLAY
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -100,6 +114,94 @@ set statusline+=%* " back to normal color
 set statusline+=\ %=%< " Right-align and start truncation
 set statusline+=\ [%04l/%04L\ %03c] " Show current line number, total lines, current column
 set statusline+=\ %p%% " Percentage through file in lines
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SETTINGS PER FILETYPE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
+if has("autocmd")
+    " Syntax of these languages is fussy over tabs Vs spaces
+    autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+    autocmd FileType yaml setlocal ts=4 sts=4 sw=4 expandtab
+
+    " Customisations based on house-style (arbitrary)
+    autocmd FileType html setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType xhtml setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 noexpandtab
+    autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
+    autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+
+    " Treat .rss files as XML
+    autocmd BufNewFile,BufRead *.rss setfiletype xml
+
+    " Autodetect todo files
+    autocmd BufNewFile,BufRead *.todo setfiletype todo
+
+    " Autodetect Actionscript files
+    au BufNewFile,BufRead *.as set filetype=actionscript
+
+    " Automatically strip extraneous whitespace when saving Python or
+    " Javascript files.
+    autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+
+    " markdown
+    augroup mkd
+        autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
+    augroup END
+
+    " JSON syntax
+    au! BufRead,BufNewFile *.json setfiletype json
+
+    " jQuery syntax
+    au! BufRead,BufNewFile *.js set ft=javascript.jquery
+
+    " Display tabs at the beginning of a line in Python mode as bad
+    au BufRead,BufNewFile *.py,*.pyw match ExtraWhitespace /^\t\+/
+    " Make trailing whitespace be flagged as bad
+    au BufRead,BufNewFile *.py,*.pyw match ExtraWhitespace /\s\+$/
+    au BufRead,BufNewFile *.py,*.pyw let python_space_errors = 1
+
+    " only UNIX line endings.
+    au BufNewFile *.* set fileformat=unix
+
+    autocmd BufEnter * :syntax sync fromstart
+
+    autocmd BufRead *.html set filetype=htmldjango.html
+    autocmd BufRead *.py set smartindent cinwords=if,else,elif,for,while,try,except,finally,def,class
+
+    " mapping to mark HTML5 files
+    autocmd BufEnter *html nmap <F7> :setfiletype html5<CR>
+
+    if version >= 700
+        autocmd FileType python set omnifunc=pythoncomplete#Complete
+        autocmd FileType css,sass set omnifunc=csscomplete#CompleteCSS
+        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType ruby,eruby set omnifunc=rubycomplete#Complete
+        autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
+        autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
+        autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
+    endif
+
+    " CSS, XML, and HTML file shoulds be folded based on indent
+    au BufNewFile,BufRead *css,*xml,*htm*,*as set foldmethod=indent
+
+    " CSS and Sass files should see - as part of a keyword
+    au! BufRead,BufNewFile *.sass,*.scss,*.less setfiletype sass
+
+    " PHP
+    augroup php
+        autocmd!
+        autocmd FileType php let php_sql_query=1
+        autocmd FileType php let php_htmlInString=1
+        autocmd FileType php let php_noShortTags=1
+        autocmd FileType php let php_folding=1
+        autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+    augroup END
+
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS

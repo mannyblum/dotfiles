@@ -4,8 +4,8 @@
 # alias ls="ls -lhFG"
 alias lg="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//-/g' -e 's/^/ /' -e 's/-/|/'"
 alias sites="cd ~/Sites"
-alias medley="cd ~/devel/cms_dev/src/medley-templates"
-alias storyville="cd ~/devel/cms_dev/src/storyville"
+alias medley="cd ~/devel/cms_local/src/medley-templates"
+alias storyville="cd ~/devel/cms_local/src/storyville"
 alias top='top -ocpu'
 alias tmux='tmux -2'
 alias localenv='. env/bin/activate'
