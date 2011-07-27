@@ -73,6 +73,20 @@ set fillchars+=fold:\
 set foldcolumn=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SEARCH
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set incsearch   " do incremental searching
+set ignorecase
+set infercase
+set hlsearch
+set showmatch
+set diffopt=filler,iwhite
+nnoremap / /\v
+vnoremap / /\v
+set gdefault
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLORS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
@@ -105,8 +119,6 @@ set statusline+=\ (%n) " buffer number
 set statusline+=\ %([%M%R%H%W]\ %) " Modified, Read-only, Help, and Preview flags
 set statusline+=\ %y " Filetype
 set statusline+=\ %#error# " switch to error color
-"set statusline+=%{StatuslineTabWarning()} " show warning about mixed tabs or bad &et
-"set statusline+=%{StatuslineTrailingSpaceWarning()} " show warning about trailing whitespace
 set statusline+=%* " back to normal color
 set statusline+=\ %#warningmsg# " switch to warningmsg color
 "set statusline+=%{SyntasticStatuslineFlag()} " show Syntastic flag
@@ -191,16 +203,6 @@ if has("autocmd")
     " CSS and Sass files should see - as part of a keyword
     au! BufRead,BufNewFile *.sass,*.scss,*.less setfiletype sass
 
-    " PHP
-    augroup php
-        autocmd!
-        autocmd FileType php let php_sql_query=1
-        autocmd FileType php let php_htmlInString=1
-        autocmd FileType php let php_noShortTags=1
-        autocmd FileType php let php_folding=1
-        autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-    augroup END
-
 endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -209,16 +211,6 @@ endif
 
 " CD to directory of current file
 map <Leader>cd :cd %:p:h<CR>
-
-" Mac OS X/Safari keybindings for tabs
-nmap <D-[> :tabprevious<CR>
-nmap <D-]> :tabnext<CR>
-map <D-[> :tabprevious<CR>
-map <D-]> :tabnext<CR>
-imap <D-[> <Esc>:tabprevious<CR>i
-imap <D-]> <Esc>:tabnext<CR>i
-nmap <D-t> :tabnew<CR>
-imap <D-t> <Esc>:tabnew<CR>
 
 " Command-T Bindings
 nmap <silent> <Leader>t :CommandT<CR>
@@ -274,21 +266,11 @@ nmap # #zzzv
 nmap g* g*zzzv
 nmap g# g#zzzv
 
-" Mappings for cope
-nmap <leader>cc :botright cope<CR>
-nmap <leader>n :cn<CR>
-nmap <leader>p :cp<CR>
-nmap <leader>ll :ll<CR>
-
 " Make <leader>ft fold an HTML tag
 nnoremap <leader>ft Vatzf
 
 " In addition to <esc>, jj will exit to normal mode.
 inoremap jj <ESC>
-
-" Cmd-/ for comment toggle.
-nnoremap <D-/> :TComment<CR>
-vnoremap <D-/> :TComment<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGIN SETTINGS
