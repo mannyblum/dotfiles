@@ -91,7 +91,7 @@ set gdefault
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set t_Co=256
-colorscheme desert256
+colorscheme molokai
 hi NonText ctermfg=7 guifg=gray
 hi SpecialKey ctermfg=8
 
@@ -171,10 +171,10 @@ if has("autocmd")
     au! BufRead,BufNewFile *.js set ft=javascript.jquery
 
     " Display tabs at the beginning of a line in Python mode as bad
-    au BufRead,BufNewFile *.py,*.pyw match ExtraWhitespace /^\t\+/
+    " au BufRead,BufNewFile *.py,*.pyw match ExtraWhitespace /^\t\+/
     " Make trailing whitespace be flagged as bad
-    au BufRead,BufNewFile *.py,*.pyw match ExtraWhitespace /\s\+$/
-    au BufRead,BufNewFile *.py,*.pyw let python_space_errors = 1
+    " au BufRead,BufNewFile *.py,*.pyw match ExtraWhitespace /\s\+$/
+    " au BufRead,BufNewFile *.py,*.pyw let python_space_errors = 1
 
     " only UNIX line endings.
     au BufNewFile *.* set fileformat=unix
