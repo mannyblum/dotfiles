@@ -157,7 +157,7 @@ if has("autocmd")
 
     " Automatically strip extraneous whitespace when saving Python or
     " Javascript files.
-    autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
+    " autocmd BufWritePre *.py,*.js :call <SID>StripTrailingWhitespaces()
 
     " markdown
     augroup mkd
