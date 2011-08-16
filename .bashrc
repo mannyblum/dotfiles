@@ -27,6 +27,7 @@ magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
 export PS1="\[$green\]\u@\h:\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
+#export PS1="\[$green\]\h:\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
 
 source ~/.bash/aliases
 source ~/.bash/paths
