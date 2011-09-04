@@ -9,13 +9,13 @@ set columns=160
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GUI COLORING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-syntax on
-set gfn=Droid\ Sans\ Mono:h15
-colorscheme fnaqevan
+"syntax on
+"set gfn=Droid\ Sans\ Mono:h15
+"colorscheme fnaqevan
 
-"Invisible character colors
-highlight NonText guifg=#4a4a59
-highlight SpecialKey guifg=#4a4a59
+""Invisible character colors
+"highlight NonText guifg=#4a4a59
+"highlight SpecialKey guifg=#4a4a59
 "set transparency=10
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

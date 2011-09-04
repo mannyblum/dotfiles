@@ -182,6 +182,7 @@ if has("autocmd")
     autocmd BufEnter * :syntax sync fromstart
 
     autocmd BufRead *.html set filetype=htmldjango.html
+    autocmd BufRead *.j2 set filetype=htmljinja
     autocmd BufRead *.py set smartindent cinwords=if,else,elif,for,while,try,except,finally,def,class
 
     " mapping to mark HTML5 files

@@ -5,11 +5,13 @@ LSCOLORS=cxfxcxdxbxegedabagacad;
 export LSCOLORS;
 export EDITOR="vi -f"
 
-if [[ "${COLORTERM}" == "gnome-terminal" && "${TERM}" != "xterm"  ]]; then
-    export TERM="gnome-256color"
-else
-    export TERM="xterm-256color"
-fi
+#if [[ "${COLORTERM}" == "gnome-terminal" && "${TERM}" != "xterm"  ]]; then
+    #export TERM="gnome-256color"
+#else
+    #export TERM="screen-256color-bce"
+#fi
+
+#export TERM="screen-256color"
 
 export HISTIGNORE=""
 export HISTSIZE=1048576
