@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
 # Aliases
-# alias ls="ls -lhFG"
 alias lg="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//-/g' -e 's/^/ /' -e 's/-/|/'"
 alias sites="cd ~/Sites"
 alias medley="cd ~/devel/cms_alpha/src/medley-templates"
 alias storyville="cd ~/devel/cms_alpha/src/storyville"
 alias top='top -ocpu'
-#alias tmux="TERM=screen-256color-bce tmux"
 alias tmux='tmux -2'
 alias localenv='. env/bin/activate'
 alias fixkb='setxkbmap -option ctrl:nocaps'
