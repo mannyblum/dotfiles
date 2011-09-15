@@ -5,14 +5,6 @@ LSCOLORS=cxfxcxdxbxegedabagacad;
 export LSCOLORS;
 export EDITOR="vi -f"
 
-#if [[ "${COLORTERM}" == "gnome-terminal" && "${TERM}" != "xterm"  ]]; then
-    #export TERM="gnome-256color"
-#else
-    #export TERM="screen-256color-bce"
-#fi
-
-#export TERM="screen-256color"
-
 export HISTIGNORE=""
 export HISTSIZE=1048576
 export HISTFILESIZE=1048576 #Max size of 1 MB (proper)
