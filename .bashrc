@@ -34,6 +34,6 @@ source ~/.bash/paths
 source ~/.bash/config
 source ~/.localrc
 
-export PATH=$HOME/local/bin:$PATH
-
 export ARCHFLAGS='-arch i386 -arch x86_64'
+export PATH=$HOME/local/node/bin:$PATH
+export NODE_PATH=$HOME/local/node:$HOME/local/node/lib/node_modules

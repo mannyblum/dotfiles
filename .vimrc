@@ -91,7 +91,9 @@ set gdefault
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set t_Co=256
-colorscheme molokai
+"let g:solarized_termcolors=256
+colorscheme solarized
+set background=dark
 hi NonText ctermfg=7 guifg=gray
 hi SpecialKey ctermfg=8
 
@@ -313,6 +315,10 @@ let g:syntastic_quiet_warnings = 0
 
 " ignore djangohtml
 let g:syntastic_disabled_filetypes = ['htmldjango', 'txt', 'text', 'tumblr', 'css']
+
+" AUTOCLOSE
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader>x <Plug>ToggleAutoCloseMappings
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FUNCTIONS
