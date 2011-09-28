@@ -3,8 +3,8 @@
 # Aliases
 alias lg="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//-/g' -e 's/^/ /' -e 's/-/|/'"
 alias sites="cd ~/Sites"
-alias medley="cd ~/devel/cms_alpha/src/medley-templates"
-alias storyville="cd ~/devel/cms_alpha/src/storyville"
+alias medley="cd ~/devel/cms_beta/src/medley-templates"
+alias storyville="cd ~/devel/cms_beta/src/storyville"
 alias top='top -ocpu'
 alias tmux='tmux -2'
 alias localenv='. env/bin/activate'
