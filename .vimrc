@@ -92,7 +92,7 @@ set gdefault
 syntax on
 set t_Co=256
 "let g:solarized_termcolors=256
-colorscheme desert256
+colorscheme molokai
 set background=dark
 hi NonText ctermfg=7 guifg=gray
 hi SpecialKey ctermfg=8

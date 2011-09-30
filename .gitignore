@@ -1,17 +1,8 @@
-/env
-
-# VIM Ignores
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
 *.swp
-*.swo
-.NERDTreeBookmarks
-.vim/.netrwhist
+*.out
 
-# OS X
-.DS_Store
-Thumbs.db
-
-# Source Ignores
-.hg
-.hgignore
-.svn
-CVS
+*.pyc
