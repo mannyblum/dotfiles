@@ -91,9 +91,9 @@ set gdefault
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set t_Co=256
-"let g:solarized_termcolors=256
-colorscheme molokai
 set background=dark
+colorscheme Tomorrow-Night-Eighties
+let g:colors_name="Tomorrow-Night-Eighties"
 hi NonText ctermfg=7 guifg=gray
 hi SpecialKey ctermfg=8
 

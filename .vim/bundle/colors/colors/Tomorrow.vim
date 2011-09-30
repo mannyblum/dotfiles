@@ -1,34 +1,26 @@
-" Tomorrow Night - Full Colour and 256 Colour
+" Tomorrow - Full Colour and 256 Colour
 " http://chriskempson.com
 "
 " Hex colour conversion functions borrowed from the theme "Desert256""
 
 " Default GUI Colours
-let s:foreground = "c5c8c6"
-let s:background = "1d1f21"
-let s:selection = "373b41"
-let s:line = "282a2e"
-let s:comment = "969896"
-let s:red = "cc6666"
-let s:orange = "de935f"
-let s:yellow = "f0c674"
-let s:green = "b5bd68"
-let s:aqua = "8abeb7"
-let s:blue = "81a2be"
-let s:purple = "b294bb"
+let s:foreground = "4d4d4c"
+let s:background = "ffffff"
+let s:selection = "c5cce9"
+let s:line = "e9efff"
+let s:comment = "8e908c"
+let s:red = "c82829"
+let s:orange = "f5871f"
+let s:yellow = "eab700"
+let s:green = "718c00"
+let s:blue = "4271ae"
+let s:purple = "8959a8"
 
-" Console 256 Colours
-if !has("gui_running")
-	let s:background = "303030"
-	let s:line = "3a3a3a"
-	let s:selection = "585858"
-end
-
-set background=dark
+set background=light
 hi clear
 syntax reset
 
-let g:colors_name = "Tomorrow-Night"
+let g:colors_name = "Tomorrow"
 
 if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	" Returns an approximate grey index for the given grey level
@@ -274,7 +266,7 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("String", s:green, "", "")
 	call <SID>X("Special", s:foreground, "", "")
 	call <SID>X("PreProc", s:purple, "", "")
-	call <SID>X("Operator", s:aqua, "", "none")
+	call <SID>X("Operator", s:foreground, "", "none")
 	call <SID>X("Type", s:blue, "", "none")
 	call <SID>X("Define", s:purple, "", "none")
 	call <SID>X("Include", s:blue, "", "") 
@@ -296,13 +288,13 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("phpMemberSelector", s:foreground, "", "")
 	
 	" Ruby Highlighting
-	call <SID>X("rubySymbol", s:green, "", "")
-	call <SID>X("rubyConstant", s:yellow, "", "")
-	call <SID>X("rubyAttribute", s:blue, "", "")
+	call <SID>X("rubySymbol", s:green, "", "")	
+	call <SID>X("rubyConstant", s:yellow, "", "")	
+	call <SID>X("rubyAttribute", s:blue, "", "")	
 	call <SID>X("rubyInclude", s:blue, "", "")
-	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")
+	call <SID>X("rubyLocalVariableOrMethod", s:orange, "", "")	
 	call <SID>X("rubyCurlyBlock", s:orange, "", "")
-
+	
 	" Python Highlighting
 	call <SID>X("pythonInclude", s:purple, "", "")
 	call <SID>X("pythonStatement", s:purple, "", "")
