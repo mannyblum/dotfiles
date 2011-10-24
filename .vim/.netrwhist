@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/mblum/devel/cms_local/src/medley-templates/templates/common/mobile'
-let g:netrw_dirhist_2='/Users/mblum/devel/cms_alpha/src/medley-templates/templates/common/web'
-let g:netrw_dirhist_3='/Users/mblum/devel/cms_alpha/src/storyville/medley/analytics_tracking'
-let g:netrw_dirhist_4='/Users/mblum/Sites/hackathon/app/views/tags'
-let g:netrw_dirhist_5='/Users/mblum/Sites/hackathon/public/stylesheets'
-let g:netrw_dirhist_6='/Users/mblum/devel/cms_alpha/src/medley-templates/templates/common/mobile/schoolclosings'
-let g:netrw_dirhist_7='/Users/mblum/source/jellydoughnut'
-let g:netrw_dirhist_8='/Users/mblum/source/jellydoughnut/docs'
-let g:netrw_dirhist_9='/Users/mblum/devel/cms_beta/src/medley-templates/templates/common/web/categories'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/mblum/bin'
+let g:netrw_dirhist_2='/Users/mblum/source/lpthw'
+let g:netrw_dirhist_3='/Users/mblum/devel/ux_cmgd/UX Projects'

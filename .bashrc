@@ -1,5 +1,8 @@
 #source ~/source/jellydoughnut/three_venv.sh
 
+export PIP_REQUIRE_VIRTUALENV=true
+export PIP_RESPECT_VIRTUALENV=true
+
 # Add pwd to prompt and add current branch in Git
 function find_git_branch {
     local dir=. head
@@ -27,7 +30,6 @@ magenta=$'\e[1;35m'
 normal_colours=$'\e[m'
 
 export PS1="\[$green\]\u:\W\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
-#export PS1="\[$green\]\h:\w\[$magenta\]\$git_branch\[$green\]\\$\[$normal_colours\] "
 
 source ~/.bash/aliases
 source ~/.bash/paths
