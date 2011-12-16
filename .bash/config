@@ -3,7 +3,6 @@
 export CLICOLOR=1;
 LSCOLORS=cxfxcxdxbxegedabagacad;
 export LSCOLORS;
-export EDITOR="vi -f"
 
 export HISTIGNORE=""
 export HISTSIZE=1048576

@@ -37,5 +37,5 @@ source ~/.bash/config
 source ~/.localrc
 
 export ARCHFLAGS='-arch i386 -arch x86_64'
-export PATH=$HOME/local/node/bin:$PATH
+export PATH=$HOME/local/node/bin:/usr/local/Cellar/ruby/1.9.2-p290/bin:$PATH
 export NODE_PATH=$HOME/local/node:$HOME/local/node/lib/node_modules
