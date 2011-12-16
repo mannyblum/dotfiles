@@ -212,9 +212,6 @@ endif
 " KEY MAPPINGS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" CD to directory of current file
-map <Leader>cd :cd %:p:h<CR>
-
 " Command-T Bindings
 nmap <silent> <Leader>t :CommandT<CR>
 nmap <silent> <Leader>b :CommandTBuffer<CR>

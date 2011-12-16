@@ -14,6 +14,6 @@ alias fixkb='setxkbmap -option ctrl:nocaps'
 alias t='python /usr/bin/t/t.py --task-dir ~/Dropbox/tasks --list tasks'
 alias b='python /usr/bin/t/t.py --task-dir . --list bugs'
 
-function activate() {
-    source ~/source/jellydoughnut/three_venv.sh
-}
+#function activate() {
+#    source ~/source/jellydoughnut/three_venv.sh
+#}
