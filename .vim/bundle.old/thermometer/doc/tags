@@ -1,0 +1,10 @@
+thermometer	thermometer.txt	/*thermometer*
+thermometer-Hgdiff	thermometer.txt	/*thermometer-Hgdiff*
+thermometer-Hgdiffoff	thermometer.txt	/*thermometer-Hgdiffoff*
+thermometer-Hglog	thermometer.txt	/*thermometer-Hglog*
+thermometer-Hgst	thermometer.txt	/*thermometer-Hgst*
+thermometer-Hgstreload	thermometer.txt	/*thermometer-Hgstreload*
+thermometer-about	thermometer.txt	/*thermometer-about*
+thermometer-commands	thermometer.txt	/*thermometer-commands*
+thermometer-statusline	thermometer.txt	/*thermometer-statusline*
+thermometer.vim	thermometer.txt	/*thermometer.vim*

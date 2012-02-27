@@ -1,10 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
-let g:netrw_dirhist_1='/Users/mblum/bin'
-let g:netrw_dirhist_2='/Users/mblum/source/lpthw'
-let g:netrw_dirhist_3='/Users/mblum/devel/ux_cmgd/UX Projects'
-let g:netrw_dirhist_4='/Users/mblum/devel/cms_beta/src/medley-templates/templates/common/mobile/weather'
-let g:netrw_dirhist_5='/Users/mblum/devel/cms_beta/src/medley-templates/media/mobile/common/css'
-let g:netrw_dirhist_6='/Users/mblum/devel/cms_beta/src/medley-templates/templates/common/mobile/includes/lists'
-let g:netrw_dirhist_7='/Users/mblum/devel/cms_beta/src/medley-templates/templates/www_boortz_com/web/includes'
-let g:netrw_dirhist_8='/Users/mblum/devel/cms_beta/src/medley-templates/templates/www_boortz_com/web/includes/rightrail'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/mblum/devel/cms_beta/src/medley-templates/media/mobile/common/javascript'
+let g:netrw_dirhist_2='/Users/mblum/source/zombies/node_modules'
+let g:netrw_dirhist_3='/Users/mblum/Dropbox/Elements'
+let g:netrw_dirhist_4='/Users/mblum/devel/cms_beta/src/medley-templates/templates/common/web/includes/oembed'
+let g:netrw_dirhist_5='/Users/mblum/source/kss'
+let g:netrw_dirhist_6='/Users/mblum/source/kss/example'
