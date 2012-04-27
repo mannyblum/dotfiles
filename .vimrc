@@ -3,7 +3,11 @@ call pathogen#infect()
 """"""" General
 set number
 set ruler
+set laststatus=2
 set backspace=indent,eol,start
+set showcmd
+set display+=lastline
+set listchars=tab:▸\ ,eol:¬,trail:-
 
 let mapleader = ','
 let g:mapleader = ','
@@ -47,9 +51,17 @@ vnoremap <F1> <ESC>
 set laststatus=2
 
 set statusline=%-.50F " Full path to file, 50 characters max
+"set statusline=%{fugitive#statusline()} " fugitive info
 set statusline+=\ (%n) " buffer number
 set statusline+=\ %([%M%R%H%W]\ %) " Modified, Read-only, Help, and Preview flags
 set statusline+=\ %y " Filetype
+set statusline+=\ %#error# " switch to error color
+set statusline+=%* " back to normal color
+set statusline+=\ %#warningmsg# " switch to warningmsg color
+set statusline+=%* " back to normal color
+set statusline+=\ %=%< " Right-align and start truncation
+set statusline+=\ [%04l/%04L\ %03c] " Show current line number, total lines, current column
+set statusline+=\ %p%% " Percentage through file in lines
 
 """"""" Filetype settings
 filetype plugin indent on
@@ -69,3 +81,7 @@ if has("autocmd")
     augroup END
 
 endif
+
+autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
+
+nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>

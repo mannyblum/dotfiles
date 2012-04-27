@@ -3,8 +3,6 @@
 # Aliases
 alias lg="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//-/g' -e 's/^/ /' -e 's/-/|/'"
 alias sites="cd ~/Sites"
-alias medley="cd ~/devel/cms_beta/src/medley-templates"
-alias storyville="cd ~/devel/cms_beta/src/storyville"
 alias top='top -ocpu'
 alias tmux='tmux -2'
 alias localenv='. env/bin/activate'
@@ -13,6 +11,10 @@ alias fixkb='setxkbmap -option ctrl:nocaps'
 # t Aliases
 alias t='python /usr/bin/t/t.py --task-dir ~/Dropbox/tasks --list tasks'
 alias b='python /usr/bin/t/t.py --task-dir . --list bugs'
+# alias to love
+alias love="/Applications/love.app/Contents/MacOS/love"
+
+alias tron='rlwrap sbcl --eval "(ql:quickload :shuffletron)" --eval "(shuffletron:run)"'
 
 #function activate() {
 #    source ~/source/jellydoughnut/three_venv.sh
