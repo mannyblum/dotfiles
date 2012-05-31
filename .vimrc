@@ -30,8 +30,9 @@ syntax on
 set t_Co=256
 "let g:solarized_termcolors=256
 set background=dark
-colorscheme solarized
-
+"colorscheme solarized
+colorscheme molokai
+let g:molokai_original = 1
 "let g:zenburn_high_Contrast = 1
 "colors zenburn
 
