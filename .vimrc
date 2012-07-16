@@ -73,6 +73,7 @@ if has("autocmd")
     autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
@@ -86,3 +87,16 @@ endif
 autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
 
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+""""""" Coffeescript
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable "fold by indentation
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab "standard two-space indentation in CoffeeScript
+
+" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
+nnoremap <silent> <M-F12> :BufExplorer<CR>
+nnoremap <silent> <F12> :bn<CR>
+nnoremap <silent> <S-F12> :bp<CR>
+
+nnoremap <leader>b :BufExplorer<CR>
+nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bp :bp<CR>
