@@ -77,6 +77,7 @@ if has("autocmd")
     autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd BufRead *.j2 set filetype=htmljinja
     " markdown
     augroup mkd
         autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
