@@ -16,11 +16,9 @@ unsetopt correctall
 # Customize to your needs...
 export PATH=/Users/mblum/bin:/Users/mblum/local/bin:/Users/mblum/bin:/usr/local/pgsql/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/mblum/local/bin:/usr/local/pgsql/bin:/usr/local/mongodb/bin:/usr/local/sbin:/usr/local/mysql/bin
 
-alias vim="vim"
-alias vi="vim"
+alias vim="/usr/local/bin/vim"
+alias vi="/usr/local/bin/vim"
 alias sites="cd ~/Sites"
-alias medley="cd ~/devel/cms_fry/src/medley-templates"
-alias storyville="cd ~/devel/cms_fry/src/storyville"
 alias top='top -ocpu'
 alias tmux='tmux -2'
 alias localenv='. env/bin/activate'
