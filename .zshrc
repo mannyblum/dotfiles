@@ -24,6 +24,8 @@ alias tmux='tmux -2'
 alias localenv='. env/bin/activate'
 alias fixkb='setxkbmap -option ctrl:nocaps'
 
+source ~/.localrc
+
 # Build/Compile Correctly
 export ARCHFLAGS="-arch i386 -arch x86_64"
 
