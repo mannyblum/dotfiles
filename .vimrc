@@ -30,9 +30,9 @@ syntax on
 set t_Co=256
 "let g:solarized_termcolors=256
 set background=dark
-"colorscheme solarized
-colorscheme molokai
-let g:molokai_original = 1
+colorscheme solarized
+"colorscheme molokai
+"let g:molokai_original = 1
 "let g:zenburn_high_Contrast = 1
 "colors zenburn
 
@@ -78,6 +78,7 @@ if has("autocmd")
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
     autocmd BufRead *.j2 set filetype=htmljinja
+    autocmd BufRead *.html set filetype=htmldjango
     " markdown
     augroup mkd
         autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
