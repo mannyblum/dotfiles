@@ -3,7 +3,6 @@ call pathogen#infect()
 """"""" General
 set number
 set ruler
-set laststatus=2
 set backspace=indent,eol,start
 set showcmd
 set display+=lastline
@@ -52,7 +51,7 @@ vnoremap <F1> <ESC>
 set laststatus=2
 
 set statusline=%-.50F " Full path to file, 50 characters max
-"set statusline=%{fugitive#statusline()} " fugitive info
+set statusline=%{fugitive#statusline()} " fugitive info
 set statusline+=\ (%n) " buffer number
 set statusline+=\ %([%M%R%H%W]\ %) " Modified, Read-only, Help, and Preview flags
 set statusline+=\ %y " Filetype
