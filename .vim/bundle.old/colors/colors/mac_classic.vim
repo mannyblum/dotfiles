@@ -1,1 +1,0 @@
-/Users/kennethlove/Code/vim-mac-classic-theme/colors/mac_classic.vim
