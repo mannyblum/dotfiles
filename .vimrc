@@ -27,13 +27,16 @@ set hlsearch
 """"""" Colors
 syntax on
 set t_Co=256
+"let base16colorspace=256  " Access colors present in 256 colorspace
 "let g:solarized_termcolors=256
-"set background=dark
+let g:molokai_original = 1
+"let g:zenburn_high_Contrast = 1
+set background=dark
 "colorscheme solarized
-"colorscheme molokai
-"let g:molokai_original = 1
-let g:zenburn_high_Contrast = 1
-colors zenburn
+colorscheme molokai
+"colors zenburn
+"colorscheme base16-default
+"colors Tomorrow-Night-Bright
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -46,6 +49,9 @@ autocmd BufWinLeave * call clearmatches()
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
+
+""""""" Remap jj to ESC
+inoremap jj <ESC>
 
 """"""" Status Line
 set laststatus=2
