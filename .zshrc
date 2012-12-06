@@ -43,3 +43,5 @@ bindkey '^R' history-incremental-search-backward
 
 # Make backspace work like vim
 bindkey '^?' backward-delete-char
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
