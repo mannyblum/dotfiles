@@ -1,7 +1,8 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="norm"
+#ZSH_THEME="norm"
+ZSH_THEME="pygmalion"
 
 plugins=(git brew django med pip vi-mode mercurial)
 

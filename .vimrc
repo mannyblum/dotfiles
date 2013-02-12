@@ -53,6 +53,9 @@ vnoremap <F1> <ESC>
 """"""" Remap jj to ESC
 inoremap jj <ESC>
 
+""""""" Autocomplete brackets, parentheses, curly brackets
+
+
 """"""" Status Line
 set laststatus=2
 
