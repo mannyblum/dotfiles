@@ -1,48 +1,56 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.oh-my-zsh
 
-#ZSH_THEME="norm"
-ZSH_THEME="pygmalion"
+source ~/.localrc
 
-plugins=(git brew django med pip vi-mode mercurial)
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+#ZSH_THEME="kolo"
+ZSH_THEME="muse"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git django med pip vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-# I hate auto correct too ...
-unsetopt correctall
+# CMG Specific
+export DEVELDIR=/opt/devel
+export CMG_LOCAL_VIRTUALENV_VERSION=1
 
-# Customize to your needs...
-source ~/.localrc
+# aliases
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
-alias top='top -ocpu'
-alias tmux='tmux -2'
-alias localenv='. env/bin/activate'
-alias fixkb='setxkbmap -option ctrl:nocaps'
-
-
-# Build/Compile Correctly
-export ARCHFLAGS="-arch i386 -arch x86_64"
-
-# if mode indicator wasn't setup by theme, define default
-if [[ "$MODE_INDICATOR" == "" ]]; then
-  NORMAL_MODE="%{$fg[yellow]%}n%{$reset_color%}"
-  INSERT_MODE="%{$fg[cyan]%}i%{$reset_color%}"
-fi
-
-function zle-line-init zle-keymap-select {
- VIMODE="${${KEYMAP/vicmd/[$NORMAL_MODE]}/(main|viins)/[$INSERT_MODE]}"
- zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
-
-bindkey -v
 
 # Make sure Ctrl-R works
 bindkey '^R' history-incremental-search-backward
 
-# Make backspace work like vim
-bindkey '^?' backward-delete-char
+export TERM="xterm-256color"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# Customize to your needs...
+export PATH=/home/vagrant/bin:/home/vagrant/bin:/home/vagrant/bin:/home/vagrant/bin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/pgsql/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/devel/cms_joker/bin:/cmg/bin:/cmg/bin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/pgsql/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
