@@ -29,11 +29,11 @@ syntax on
 set t_Co=256
 "let base16colorspace=256  " Access colors present in 256 colorspace
 "let g:solarized_termcolors=256
-let g:molokai_original = 1
 "let g:zenburn_high_Contrast = 1
 set background=dark
-"colorscheme solarized
-colorscheme molokai
+colorscheme solarized
+"let g:molokai_original = 1
+"colorscheme molokai
 "colors zenburn
 "colorscheme base16-default
 "colors Tomorrow-Night-Bright
@@ -134,3 +134,6 @@ au FileType javascript inoremap igc<Tab> =ig.Class.extend({<CR>init: function(){
 
 "will actually insert the filename there, so you won't go crazy figuring out what's missing (but I didn't replace dashes by caps, no time now!)
 au FileType javascript inoremap ige<Tab> =ig.Entity.extend({<CR>type:ig.Entity.TYPE.NONE,<CR>checkAgainst:ig.Entity.TYPE.NONE,<CR>collides: ig.Entity.COLLIDES.NEVER,<CR><CR>size:{x:8,y:8},<CR><CR>animSheet: new ig.AnimationSheet( 'media/sprite<C-R>=expand("%:t:r")<CR>.png', 8, 8 ),<CR><CR>init: function(x,y,settings){<CR>this.parent( x, y, settings );<CR>this.addAnim( 'idle', 1, [0] );<CR>},<CR><CR>update: function(){<CR>this.parent();<CR>}<CR>});<Esc>17kI<C-R>=expand("%:t:r")<CR><Esc>bguw~l<Esc>IEntity
+
+"pretty json format
+map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>

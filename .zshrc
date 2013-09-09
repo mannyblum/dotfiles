@@ -52,5 +52,8 @@ bindkey '^R' history-incremental-search-backward
 export TERM="xterm-256color"
 
 # Customize to your needs...
-export PATH=/home/vagrant/bin:/home/vagrant/bin:/home/vagrant/bin:/home/vagrant/bin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/pgsql/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/opt/devel/cms_joker/bin:/cmg/bin:/cmg/bin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/pgsql/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+#export PATH=/home/vagrant/bin:/home/vagrant/bin:/home/vagrant/bin:/home/vagrant/bin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/share/npm/bin
 
+export PATH=/usr/local/Cellar/node/2.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/Cellar/node/0.6.15:/usr/local/Cellar/ruby/1.9.2-p290/bin:/usr/local/mongodb/bin:/usr/local/bin:/usr/local/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/share/npm/bin
+
+skip_global_compinit=1
