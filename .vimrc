@@ -31,11 +31,11 @@ set t_Co=256
 "let g:solarized_termcolors=256
 "let g:zenburn_high_Contrast = 1
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "let g:molokai_original = 1
 "colorscheme molokai
 "colors zenburn
-"colorscheme base16-default
+colorscheme base16-default
 "colors Tomorrow-Night-Bright
 
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -137,3 +137,7 @@ au FileType javascript inoremap ige<Tab> =ig.Entity.extend({<CR>type:ig.Entity.T
 
 "pretty json format
 map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
+
+" for powerline
+" python from powerline.bindings.vim import source_plugin; source_plugin()
+" source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
