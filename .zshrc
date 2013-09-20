@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+source ~/.bin/base16-tomorrow.dark.sh
 source ~/.localrc
 unsetopt correct
 
@@ -37,15 +38,11 @@ plugins=(git django med pip vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
-# CMG Specific
-export DEVELDIR=/opt/devel
-export CMG_LOCAL_VIRTUALENV_VERSION=1
-
 # aliases
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
-
+alias tmux="TERM=screen-256color-bce tmux -2"
 
 # Make sure Ctrl-R works
 bindkey '^R' history-incremental-search-backward

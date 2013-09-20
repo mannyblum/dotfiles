@@ -1,1 +1,2 @@
 --type-add=less=.less
+--type-add=php=.phtml

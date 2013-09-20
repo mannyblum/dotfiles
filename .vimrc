@@ -28,6 +28,7 @@ set hlsearch
 syntax on
 set t_Co=256
 "let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-tomorrow
 "let g:solarized_termcolors=256
 "let g:zenburn_high_Contrast = 1
 set background=dark
@@ -35,7 +36,6 @@ set background=dark
 "let g:molokai_original = 1
 "colorscheme molokai
 "colors zenburn
-colorscheme base16-default
 "colors Tomorrow-Night-Bright
 
 highlight ExtraWhitespace ctermbg=red guibg=red
