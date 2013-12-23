@@ -31,3 +31,15 @@
 [submodule ".vim/bundle/fugitive"]
 	path = .vim/bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/bundle/ctrlp"]
+	path = .vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim.git
+[submodule ".vim/bundle/ack-vim"]
+	path = .vim/bundle/ack-vim
+	url = https://github.com/mileszs/ack.vim.git
+[submodule ".vim/bundle/scss"]
+	path = .vim/bundle/scss
+	url = https://github.com/cakebaker/scss-syntax.vim.git
+[submodule ".vim/bundle/mustache-handlebars"]
+	path = .vim/bundle/mustache-handlebars
+	url = https://github.com/mustache/vim-mustache-handlebars.git
