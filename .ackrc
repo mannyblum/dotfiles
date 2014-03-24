@@ -1,2 +1,3 @@
---type-add=less=.less
---type-add=php=.phtml
+--type-set=less=.less
+--type-set=php=.phtml
+--type-set=html=.mustache

@@ -1,3 +1,4 @@
+""""""" pathongen
 call pathogen#infect()
 
 """"""" General
@@ -60,6 +61,7 @@ nnoremap <A-x> <C-x>
 
 """"""" Status Line
 set laststatus=2
+set pastetoggle=<F2>
 
 "set statusline=%-.50F " Full path to file, 50 characters max
 "set statusline=%{fugitive#statusline()} " fugitive info
@@ -84,10 +86,13 @@ if has("autocmd")
     autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
+    "autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab equalprg=csstidy\ -\ --silent=true
+    "autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
     autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
-    autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType php setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
     autocmd BufRead *.j2 set filetype=htmljinja
     autocmd BufRead *.html set filetype=htmldjango
     " markdown
@@ -97,7 +102,6 @@ if has("autocmd")
 
 endif
 
-autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
 
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
@@ -109,14 +113,14 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable "fold by 
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab "standard two-space indentation in CoffeeScript
 
 """"""" JSHint
-au BufWritePost *.js :JSHint
+"au BufWritePost *.js :JSHint
 
 """"""" NERD_TREE
 nmap <C-n> :NERDTreeFind<CR>
 let g:NERDChristmasTree = 1
 let g:NERDTreeQuitOnOpen = 1
 let g:NERDTreeWinPos = 'right'
-let g:NERDTreeWinSize = 30
+let g:NERDTreeWinSize = 50
 let g:NERDTreeChDirMode = 2
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeAutoCenter = 1

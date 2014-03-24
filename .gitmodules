@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/mustache-handlebars"]
 	path = .vim/bundle/mustache-handlebars
 	url = https://github.com/mustache/vim-mustache-handlebars.git
+[submodule ".vim/bundle/gitgutter"]
+	path = .vim/bundle/gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
