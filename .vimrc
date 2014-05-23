@@ -25,6 +25,8 @@ set shiftwidth=4
 
 set hlsearch
 
+set tags=./tags,tags;$HOME
+
 """"""" Colors
 syntax on
 set background=dark

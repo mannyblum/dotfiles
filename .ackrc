@@ -1,3 +1,4 @@
 --type-set=less=.less
---type-set=php=.phtml
+--type-set=php=.php
+--type-set=phtml=.phtml
 --type-set=html=.mustache
