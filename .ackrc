@@ -1,4 +1,5 @@
 --type-set=less=.less
 --type-set=php=.php
 --type-set=phtml=.phtml
---type-set=html=.mustache
+--type-set=html=.html,.mustache,.template
+--type-set=sass=.scss
