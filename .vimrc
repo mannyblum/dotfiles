@@ -23,6 +23,7 @@ set softtabstop=4
 set shiftwidth=4
 
 set hlsearch
+set incsearch
 
 """"""" Colors
 syntax on
@@ -79,15 +80,13 @@ set laststatus=2
 filetype plugin indent on
 if has("autocmd")
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType xhtml setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
+    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
-    autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab
     autocmd BufRead *.j2 set filetype=htmljinja
     autocmd BufRead *.html set filetype=htmldjango
     " markdown
@@ -101,6 +100,8 @@ autocmd filetype css setlocal equalprg=csstidy\ -\ --silent=true
 
 nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 
+set pastetoggle=<F2>
+
 """"""" Pretty json format
 map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
 
@@ -108,8 +109,10 @@ map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable "fold by indentation
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab "standard two-space indentation in CoffeeScript
 
+au BufRead,BufNewFile *.handlebars,*hbs set ft=html syntax=handlebars
+
 """"""" JSHint
-au BufWritePost *.js :JSHint
+"au BufWritePost *.js :JSHint
 
 """"""" NERD_TREE
 nmap <C-n> :NERDTreeFind<CR>
@@ -151,6 +154,12 @@ let g:airline#extensions#tabline#enabled = 1
 
 " }}}
 
+" Mustache {{{
+
+let g:mustache_abbreviations = 1
+
+" }}}
+
 " get filesize
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
@@ -173,3 +182,5 @@ function! AirlineInit()
     let g:airline_section_z = airline#section#create_right(['%l', '%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
+
+let g:posero_default_mappings = 1
