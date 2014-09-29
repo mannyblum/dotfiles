@@ -3,3 +3,5 @@
 --type-set=phtml=.phtml
 --type-set=html=.html,.mustache,.template
 --type-set=sass=.scss
+
+--ignore-file=match:.scssc

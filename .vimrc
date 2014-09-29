@@ -8,6 +8,8 @@ set backspace=indent,eol,start
 set showcmd
 set display+=lastline
 set listchars=tab:▸\ ,eol:¬,trail:-
+set nobackup
+set nowritebackup
 
 let mapleader = ','
 let g:mapleader = ','
