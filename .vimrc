@@ -7,6 +7,7 @@ set number
 set ruler
 set backspace=indent,eol,start
 set showcmd
+set showmatch
 set display+=lastline
 
 let mapleader = ','
@@ -142,3 +143,5 @@ function! AirlineInit()
     let g:airline_section_z = airline#section#create_right(['%l', '%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
+
+set omnifunc=syntaxcomplete#Complete
