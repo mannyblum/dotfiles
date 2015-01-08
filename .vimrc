@@ -25,6 +25,7 @@ set softtabstop=4
 set shiftwidth=4
 
 set hlsearch
+set incsearch
 
 """""" colors
 syntax on
