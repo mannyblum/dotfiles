@@ -1,47 +1,62 @@
-"""""" pathogen
+" Pathogen {{{
 execute pathogen#infect()
+" }}}
+
+" Misc {{{
+syntax on
 filetype plugin indent on
-
-"""""" general
-set number
-set ruler
 set backspace=indent,eol,start
-set showcmd
-set showmatch
-set display+=lastline
+highlight ExtraWhitespace ctermbg=red guibg=red
+set omnifunc=syntaxcomplete#Complete
+" }}}
 
-let mapleader = ','
-let g:mapleader = ','
-let localleader = '\'
-let g:localleader = '\'
-let leader = ','
-let g:leader = ','
+" Colors {{{
+let base16colorspace=256
+set t_Co=256
+set background=dark
+colorscheme base16-tomorrow
+" }}}
 
+" Spaces & Tabs {{{
 set nosmartindent
 set smarttab
 set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
+" }}}
 
+" UI Config {{{
+set number
+set ruler
+set showcmd
+set showmatch
+set display+=lastline
+" }}}
+
+" Leader Shortcuts {{{
+let mapleader = ','
+let g:mapleader = ','
+let localleader = '\'
+let g:localleader = '\'
+let leader = ','
+let g:leader = ','
+" }}}
+
+" Searching {{{
 set hlsearch
 set incsearch
+" }}}
 
-"""""" colors
-syntax on
-let base16colorspace=256
-set t_Co=256
-set background=dark
-colorscheme base16-tomorrow
-
-highlight ExtraWhitespace ctermbg=red guibg=red
+" ExtraWhiteSpace {{{
 match ExtraWhiteSpace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
+" }}}
 
-"""""" remove f1 default behavior
+" Remaps {{{
 inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
@@ -53,11 +68,22 @@ inoremap jj <ESC>
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
 
-""""""" Status Line
+" }}}
+
+" Status Line {{{
 set laststatus=2
 set pastetoggle=<F2>
+" }}}
 
-""""""" Filetype settings
+" Folding {{{
+set foldmethod=indent   " fold based on indent level
+set foldnestmax=10      " max 10 depth
+set foldenable          " don't fold files by default on open
+nnoremap <space> za
+set foldlevelstart=10    " start with fold level of 1
+" }}}
+
+" Filetype Settings {{{
 filetype plugin indent on
 if has("autocmd")
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
@@ -80,11 +106,9 @@ if has("autocmd")
     augroup END
 
 endif
+" }}}
 
-""""""" JSHint
-"au BufWritePost *.js :JSHint
-
-""""""" NERD_TREE
+" NerdTree {{{
 nmap <C-n> :NERDTreeFind<CR>
 let g:NERDChristmasTree = 1
 let g:NERDTreeQuitOnOpen = 1
@@ -98,8 +122,10 @@ let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeSortOrder = ['\/$', '*']
 let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeMinimalUI = 1
+" }}}
 
-""""""" Buffers - explore/next/previous: Alt-F12, F12, Shift-F12.
+" Buffers {{{
+" Explore/next/previous: Alt-F12, F12, Shift-F12.
 nnoremap <silent> <M-F12> :BufExplorer<CR>
 nnoremap <silent> <F12> :bn<CR>
 nnoremap <silent> <S-F12> :bp<CR>
@@ -113,6 +139,7 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+" }}}
 
 " Airline {{{
 
@@ -124,7 +151,14 @@ let g:airline#extensions#tabline#enabled = 1
 
 " }}}
 
-" get filesize
+" CtrlP {{{
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+" }}}
+
+" Custom Functions {{{
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
     if bytes <= 0
@@ -136,7 +170,9 @@ function! FileSize()
         return (bytes / 1024) . "K"
     endif
 endfunction
+" }}}
 
+" Airline {{{
 function! AirlineInit()
     let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
     let g:airline_section_b = airline#section#create_left(['ffenc', 'hunks', '%f'])
@@ -146,5 +182,6 @@ function! AirlineInit()
     let g:airline_section_z = airline#section#create_right(['%l', '%c'])
 endfunction
 autocmd VimEnter * call AirlineInit()
+" }}}
 
-set omnifunc=syntaxcomplete#Complete
+" vim:foldmethod=marker:foldlevel=0
