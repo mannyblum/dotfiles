@@ -163,6 +163,10 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 " }}}
 
+" Syntastic {{{
+let g:syntastic_javascript_checkers = ['jshint']
+" }}}
+
 " Custom Functions {{{
 function! FileSize()
     let bytes = getfsize(expand("%:p"))
