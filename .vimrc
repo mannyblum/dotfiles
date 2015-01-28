@@ -141,6 +141,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " }}}
 
+" Handlebars
+let g:mustache_abbreviations = 1
+
 " Airline {{{
 
 let g:airline_powerline_fonts=0
