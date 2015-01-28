@@ -122,6 +122,8 @@ let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeSortOrder = ['\/$', '*']
 let g:NERDTreeShowLineNumbers = 1
 let g:NERDTreeMinimalUI = 1
+
+autocmd vimenter * if !argc() | NERDTree | endif
 " }}}
 
 " Buffers {{{
