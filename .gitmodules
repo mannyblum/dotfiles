@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/vim-coloresque"]
+	path = .vim/bundle/vim-coloresque
+	url = https://github.com/gorodinskiy/vim-coloresque.git
