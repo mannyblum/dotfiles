@@ -55,3 +55,12 @@
 [submodule ".vim/bundle/vim-coloresque"]
 	path = .vim/bundle/vim-coloresque
 	url = https://github.com/gorodinskiy/vim-coloresque.git
+[submodule ".vim/bundle/vim-visual-increment"]
+	path = .vim/bundle/vim-visual-increment
+	url = https://github.com/triglav/vim-visual-increment.git
+[submodule ".vim/bundle/emmet-vim"]
+	path = .vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule ".vim/bundle/vim-jsx"]
+	path = .vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
