@@ -28,7 +28,7 @@ set incsearch
 """"""" Colors
 syntax on
 set background=dark
-colorscheme base16-tomorrow
+colorscheme base16-isotope
 "set t_Co=256
 "let base16colorspace=256  " Access colors present in 256 colorspace
 "let g:solarized_termcolors=256
@@ -37,7 +37,7 @@ colorscheme base16-tomorrow
 "let g:molokai_original = 1
 "colorscheme molokai
 "colors zenburn
-"colors Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -85,10 +85,11 @@ if has("autocmd")
     autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
-    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
     autocmd BufRead *.j2 set filetype=htmljinja
     autocmd BufRead *.html set filetype=htmldjango
+    autocmd BufRead,BufNewFile *.json setf json
     " markdown
     augroup mkd
         autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
@@ -103,13 +104,15 @@ nnoremap ,m :w <BAR> !lessc % > %:t:r.css<CR><space>
 set pastetoggle=<F2>
 
 """"""" Pretty json format
-map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
+""""""" map <leader>jt <Esc>:%!json_xs -f json -t json-pretty<CR>
+
 
 """"""" Coffeescript
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable "fold by indentation
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab "standard two-space indentation in CoffeeScript
 
 au BufRead,BufNewFile *.handlebars,*hbs set ft=html syntax=handlebars
+au BufRead,BufNewFile *.scss, set filetype=scss.css
 
 """"""" JSHint
 "au BufWritePost *.js :JSHint
@@ -158,6 +161,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 let g:mustache_abbreviations = 1
 
+" }}}
+
+" Javascript Libraries Syntax {{{
+let g:used_javascript_libs = 'underscore,angularjs,jquery,angularui,jasmine'
 " }}}
 
 " get filesize
