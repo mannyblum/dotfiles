@@ -11,7 +11,7 @@ set spell spelllang=en_us
 " }}}
 
 " Colors {{{
-let base16colorspace=256
+"let base16colorspace=256
 set t_Co=256
 set background=dark
 "colorscheme base16-tomorrow
@@ -201,5 +201,4 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 " }}}
-
 " vim:foldmethod=marker:foldlevel=0
