@@ -1,5 +1,6 @@
 " Pathogen {{{
 execute pathogen#infect()
+Helptags
 " }}}
 
 " Misc {{{
@@ -11,20 +12,20 @@ set spell spelllang=en_us
 " }}}
 
 " Colors {{{
-"let base16colorspace=256
+let base16colorspace=256
 set t_Co=256
 set background=dark
-"colorscheme base16-tomorrow
-colorscheme base16-isotope
+colorscheme base16-twilight
 " }}}
 
 " Spaces & Tabs {{{
 set nosmartindent
 set smarttab
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+set colorcolumn=80
 " }}}
 
 " UI Config {{{
@@ -33,6 +34,7 @@ set ruler
 set showcmd
 set showmatch
 set display+=lastline
+set mouse=a
 " }}}
 
 " Leader Shortcuts {{{
@@ -102,6 +104,7 @@ if has("autocmd")
     autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
     autocmd BufRead *.j2 set filetype=htmljinja
     autocmd BufRead *.html set filetype=htmldjango
+    autocmd BufRead *.conf set filetype=toml
     " markdown
     augroup mkd
         autocmd BufRead *.mkd  set ai formatoptions=tcroqn2 comments=n:>
@@ -171,7 +174,12 @@ let g:ctrlp_custom_ignore = {
 " }}}
 
 " Syntastic {{{
-let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_javascript_checkers = ['jshint']
+ let g:syntastic_javascript_checkers = ['eslint']
+" }}}
+
+" JSX {{{
+let g:jsx_ext_required = 0 " Allow JSX in normal JS Files
 " }}}
 
 " Custom Functions {{{
@@ -190,7 +198,7 @@ endfunction
 
 " Airline {{{
 let g:airline_powerline_fonts=1
-let g:airline_theme='badwolf'
+let g:airline_theme='base16_twilight'
 function! AirlineInit()
     "let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
     "let g:airline_section_b = airline#section#create_left(['ffenc', 'hunks', '%f'])
@@ -201,4 +209,12 @@ function! AirlineInit()
 endfunction
 autocmd VimEnter * call AirlineInit()
 " }}}
+
+" XML {{{
+hi Tag        ctermfg=04
+hi xmlTag     ctermfg=04
+hi xmlTagName ctermfg=04
+hi xmlEndTag  ctermfg=04
+" }}}
+
 " vim:foldmethod=marker:foldlevel=0
