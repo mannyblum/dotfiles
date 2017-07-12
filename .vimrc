@@ -15,7 +15,7 @@ set spell spelllang=en_us
 let base16colorspace=256
 set t_Co=256
 set background=dark
-colorscheme base16-twilight
+colorscheme base16-eighties
 " }}}
 
 " Spaces & Tabs {{{
@@ -158,7 +158,16 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_fugitive_prefix = ''
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
+" }}}
+
+" ALE {{{
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_linters = {
+\   'javascript': ['eslint']
+\}
 " }}}
 
 " CtrlP {{{
@@ -175,10 +184,11 @@ let g:ctrlp_custom_ignore = {
 
 " Syntastic {{{
 " let g:syntastic_javascript_checkers = ['jshint']
- let g:syntastic_javascript_checkers = ['eslint']
+ "let g:syntastic_javascript_checkers = ['eslint']
 " }}}
 
 " JSX {{{
+" let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0 " Allow JSX in normal JS Files
 " }}}
 
@@ -215,6 +225,10 @@ hi Tag        ctermfg=04
 hi xmlTag     ctermfg=04
 hi xmlTagName ctermfg=04
 hi xmlEndTag  ctermfg=04
+" }}}
+
+" JSHINT {{{
+let g:JSHintHighlightErrorLine = 0
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
