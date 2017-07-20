@@ -93,8 +93,8 @@ if has("autocmd")
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType xhtml setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 expandtab
-    autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
+    "autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 expandtab
+    "autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
     "autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab equalprg=csstidy\ -\ --silent=true
     "autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
@@ -103,7 +103,6 @@ if has("autocmd")
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
     autocmd FileType scss setlocal ts=2 sts=2 sw=2 expandtab
     autocmd BufRead *.j2 set filetype=htmljinja
-    autocmd BufRead *.html set filetype=htmldjango
     autocmd BufRead *.conf set filetype=toml
     " markdown
     augroup mkd
@@ -158,7 +157,7 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_fugitive_prefix = ''
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
 
 " }}}
 
@@ -229,6 +228,25 @@ hi xmlEndTag  ctermfg=04
 
 " JSHINT {{{
 let g:JSHintHighlightErrorLine = 0
+" }}}
+
+" Numbers {{{
+nnoremap <F3> :NumbersToggle<CR>
+
+let g:numbers_exclude = ['nerdtree', 'minibufexpl']
+" }}}
+
+" Prettier {{{
+
+" }}}
+
+" UltiSnips {{{
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsUsePythonVersion=2
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
+let g:UltiSnipsEditSplit="vertical"
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
