@@ -1,3 +1,13 @@
+"  ▄█    █▄   ▄█    ▄▄▄▄███▄▄▄▄
+" ███    ███ ███  ▄██▀▀▀███▀▀▀██▄
+" ███    ███ ███▌ ███   ███   ███
+" ███    ███ ███▌ ███   ███   ███
+" ███    ███ ███▌ ███   ███   ███
+" ███    ███ ███  ███   ███   ███
+" ███    ███ ███  ███   ███   ███
+"  ▀██████▀  █▀    ▀█   ███   █▀
+
+
 " Pathogen {{{
 execute pathogen#infect()
 Helptags
@@ -12,10 +22,12 @@ set spell spelllang=en_us
 " }}}
 
 " Colors {{{
-let base16colorspace=256
+"let base16colorspace=256
 set t_Co=256
 set background=dark
-colorscheme base16-eighties
+"colorscheme base16-eighties
+let g:gruvbox_italic=1
+colorscheme gruvbox
 " }}}
 
 " Spaces & Tabs {{{
@@ -152,7 +164,7 @@ let g:mustache_abbreviations = 1
 
 " Airline {{{
 
-let g:airline_powerline_fonts=0
+let g:airline_powerline_fonts=1
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_fugitive_prefix = ''
@@ -207,7 +219,7 @@ endfunction
 
 " Airline {{{
 let g:airline_powerline_fonts=1
-let g:airline_theme='base16_twilight'
+let g:airline_theme='gruvbox'
 function! AirlineInit()
     "let g:airline_section_a = airline#section#create(['mode', ' ', 'branch'])
     "let g:airline_section_b = airline#section#create_left(['ffenc', 'hunks', '%f'])
