@@ -105,11 +105,7 @@ if has("autocmd")
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType html setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType xhtml setlocal ts=4 sts=4 sw=4 expandtab
-    "autocmd FileType htmldjango.html setlocal ts=4 sts=4 sw=4 expandtab
-    "autocmd FileType htmldjango setlocal ts=4 sts=4 sw=4 expandtab
     autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-    "autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab equalprg=csstidy\ -\ --silent=true
-    "autocmd FileType css setlocal equalprg=csstidy\ -\ --silent=true
     autocmd FileType less setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType javascript setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType python setlocal ts=4 sts=4 sw=4 expandtab nocindent
@@ -122,6 +118,11 @@ if has("autocmd")
     augroup END
 
 endif
+" }}}
+
+" Highlights {{{
+highlight htmlArg cterm=italic
+highlight sassVariable cterm=italic
 " }}}
 
 " NerdTree {{{
