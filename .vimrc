@@ -123,6 +123,7 @@ endif
 " Highlights {{{
 highlight htmlArg cterm=italic
 highlight sassVariable cterm=italic
+highlight xmlAttrib cterm=italic
 " }}}
 
 " NerdTree {{{
@@ -160,8 +161,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 " }}}
 
-" Handlebars
+" Handlebars {{{
 let g:mustache_abbreviations = 1
+" }}}
 
 " Airline {{{
 
