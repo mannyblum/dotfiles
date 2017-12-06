@@ -19,6 +19,7 @@ filetype plugin indent on
 set backspace=indent,eol,start
 set omnifunc=syntaxcomplete#Complete
 set spell spelllang=en_us
+set noswapfile
 " }}}
 
 " Colors {{{
@@ -84,6 +85,9 @@ inoremap jj <ESC>
 nnoremap <A-a> <C-a>
 nnoremap <A-x> <C-x>
 
+""""" break at cursor location
+nnoremap K i<CR> <ESC>
+
 " }}}
 
 " Status Line {{{
@@ -138,7 +142,7 @@ let g:NERDTreeAutoCenter = 1
 let g:NERDTreeIgnore = ['\.git$', '\.svn$', '\.jpg$', '\.gif$', '\.png$', '\.pyc', '\.DS_Store', '\.swp$', '\.swo$']
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeSortOrder = ['\/$', '*']
-let g:NERDTreeShowLineNumbers = 1
+let g:NERDTreeShowLineNumbers = 0
 let g:NERDTreeMinimalUI = 1
 
 autocmd vimenter * if !argc() | NERDTree | endif
@@ -172,11 +176,12 @@ let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 let g:airline_fugitive_prefix = ''
 let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#ale#enabled = 1
+let g:airline#extensions#ale#enabled = 1
 
 " }}}
 
 " ALE {{{
+let g:ale_javascript_eslint_use_global=1
 let g:ale_lint_on_save = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_linters = {
@@ -263,5 +268,12 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsSnippetsDir="~/.vim/UltiSnips"
 let g:UltiSnipsEditSplit="vertical"
 " }}}
+
+let g:gitgutter_realtime=0
+set guifont=Operator\ Mono\ Medium\ Nerd\ Font\ 10
+set encoding=utf8
+let g:webdevicons_enable=1
+let g:webdevicons_enable_nerdtree=1
+let g:WebDevIconsUnicodeDecorateFolderNodes=1
 
 " vim:foldmethod=marker:foldlevel=0
